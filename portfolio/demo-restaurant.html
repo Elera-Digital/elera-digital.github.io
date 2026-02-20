@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trattoria Bella Vita — Authentisch italienische Küche in Detmold. Pasta, Pizza, Wein und mehr.">
+    <title>Trattoria Bella Vita — Italienisches Restaurant Detmold</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #991b1b;
+            --primary-dark: #7f1d1d;
+            --dark: #1c1917;
+            --gray: #78716c;
+            --light: #fef2f2;
+            --white: #ffffff;
+            --cream: #fffbeb;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; }
+
+        nav {
+            position: fixed; top: 0; width: 100%; background: rgba(28,25,23,0.95);
+            backdrop-filter: blur(10px); z-index: 100; padding: 1rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #fbbf24; }
+        nav a { color: #d6d3d1; text-decoration: none; margin-left: 1.5rem; font-weight: 500; font-size: 0.95rem; }
+        nav a:hover { color: #fbbf24; }
+
+        .hero {
+            padding: 12rem 2rem 6rem; text-align: center;
+            background: linear-gradient(135deg, var(--dark) 0%, #44403c 100%); color: var(--white);
+        }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 1.5rem; }
+        .hero h1 .hl { color: #fbbf24; }
+        .hero p { font-size: 1.15rem; color: #d6d3d1; max-width: 550px; margin: 0 auto 2.5rem; }
+        .btn {
+            display: inline-block; background: var(--primary); color: var(--white);
+            padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: background 0.2s, transform 0.2s;
+        }
+        .btn:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-gold { background: #b45309; }
+        .btn-gold:hover { background: #92400e; }
+
+        section { padding: 5rem 2rem; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .section-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 0.75rem; }
+        .section-sub { text-align: center; color: var(--gray); font-size: 1.05rem; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+        .about { background: var(--cream); }
+        .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .about-inner p { color: var(--gray); margin-bottom: 1rem; }
+        .about-img { background: linear-gradient(135deg, #991b1b, #b45309); border-radius: 16px; height: 300px; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+
+        .menu { background: var(--white); }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .m-card {
+            background: var(--cream); border-radius: 12px; padding: 2rem;
+            border-left: 4px solid var(--primary);
+        }
+        .m-card h3 { margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .m-card p { color: var(--gray); font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .m-card .price { font-weight: 700; color: var(--primary); font-size: 1.1rem; }
+
+        .contact { background: var(--dark); color: var(--white); text-align: center; }
+        .contact h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem; }
+        .contact p { color: #a8a29e; font-size: 1.05rem; margin-bottom: 0.5rem; }
+        .hours { display: inline-block; text-align: left; margin: 1.5rem auto; background: #292524; padding: 1.5rem 2rem; border-radius: 12px; }
+        .hours p { color: #d6d3d1; font-size: 0.95rem; margin-bottom: 0.25rem; }
+        .hours strong { color: #fbbf24; }
+
+        footer { background: var(--dark); border-top: 1px solid #292524; color: #a8a29e; text-align: center; padding: 1.5rem; font-size: 0.85rem; }
+        footer a { color: #a8a29e; text-decoration: none; }
+        footer a:hover { color: var(--white); }
+
+        @media (max-width: 768px) {
+            nav { padding: 1rem; } nav a { margin-left: 1rem; font-size: 0.85rem; }
+            .hero { padding: 9rem 1.5rem 4rem; }
+            section { padding: 3rem 1.5rem; }
+            .about-inner { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Bella Vita</div>
+    <div>
+        <a href="#ueber">Über uns</a>
+        <a href="#speisekarte">Speisekarte</a>
+        <a href="#kontakt">Reservieren</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <h1>Trattoria <span class="hl">Bella Vita</span></h1>
+        <p>Authentisch italienische Küche mitten in Detmold. Frische Pasta, knusprige Pizza aus dem Steinofen und erlesene Weine — wie in Italien.</p>
+        <a href="#kontakt" class="btn btn-gold">Tisch reservieren</a>
+    </div>
+</section>
+
+<section class="about" id="ueber">
+    <div class="container">
+        <div class="about-inner">
+            <div>
+                <h2 class="section-title" style="text-align:left;">La Nostra Storia</h2>
+                <p>Seit 2018 bringt Familie Rossi die Aromen Süditaliens nach Detmold. Unsere Rezepte stammen aus der Küche von Nonna Maria in Neapel — überliefert seit drei Generationen.</p>
+                <p>Wir verwenden ausschließlich frische, saisonale Zutaten. Unsere Pasta wird täglich frisch zubereitet, der Pizzateig ruht 48 Stunden für den perfekten Geschmack. Dazu bieten wir eine handverlesene Auswahl italienischer Weine.</p>
+            </div>
+            <div class="about-img">🍕</div>
+        </div>
+    </div>
+</section>
+
+<section class="menu" id="speisekarte">
+    <div class="container">
+        <h2 class="section-title">Unsere Highlights</h2>
+        <p class="section-sub">Ein Auszug aus unserer Speisekarte — die komplette Karte erhalten Sie bei Ihrem Besuch.</p>
+        <div class="menu-grid">
+            <div class="m-card">
+                <h3>🥗 Antipasti Misto</h3>
+                <p>Gemischte Vorspeise mit Bruschetta, Burrata, gegrilltem Gemüse und Parmaschinken.</p>
+                <div class="price">14,90€</div>
+            </div>
+            <div class="m-card">
+                <h3>🍝 Tagliatelle al Tartufo</h3>
+                <p>Hausgemachte Bandnudeln mit schwarzem Trüffel, Parmesan und Butter.</p>
+                <div class="price">18,50€</div>
+            </div>
+            <div class="m-card">
+                <h3>🍕 Pizza Margherita DOC</h3>
+                <p>San-Marzano-Tomaten, Büffelmozzarella, Basilikum. Aus dem Steinofen bei 450°C.</p>
+                <div class="price">12,90€</div>
+            </div>
+            <div class="m-card">
+                <h3>🥩 Saltimbocca alla Romana</h3>
+                <p>Kalbsschnitzel mit Salbei und Parmaschinken, dazu Rosmarinkartoffeln.</p>
+                <div class="price">22,50€</div>
+            </div>
+            <div class="m-card">
+                <h3>🐟 Branzino al Forno</h3>
+                <p>Ganzer Wolfsbarsch aus dem Ofen mit Zitrone, Kapern und Oliven.</p>
+                <div class="price">24,90€</div>
+            </div>
+            <div class="m-card">
+                <h3>🍰 Tiramisù della Casa</h3>
+                <p>Das Original nach Nonnas Rezept — cremig, mit Espresso und Amaretto.</p>
+                <div class="price">7,90€</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="kontakt">
+    <div class="container">
+        <h2>Reservieren Sie Ihren Tisch</h2>
+        <p>📞 05231 / 987 654</p>
+        <p>✉️ ciao@bellavita-detmold.de</p>
+        <p>📍 Lange Straße 42, 32756 Detmold</p>
+        <div class="hours">
+            <p><strong>Öffnungszeiten:</strong></p>
+            <p>Di — Do: 17:00 — 22:00</p>
+            <p>Fr — Sa: 12:00 — 23:00</p>
+            <p>So: 12:00 — 21:00</p>
+            <p>Mo: Ruhetag</p>
+        </div>
+        <br>
+        <a href="tel:05231987654" class="btn btn-gold">Jetzt anrufen</a>
+    </div>
+</section>
+
+<footer>
+    <p>Demo erstellt von <a href="../index.html">Elera Digital</a> — Dies ist eine Beispielseite.</p>
+</footer>
+
+</body>
+</html>
